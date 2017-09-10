@@ -11,7 +11,7 @@
 </head>
 <body>
 
-		<table border='1'>
+		<!--  table border='1'>
 			
 			<c:forEach items ="${listuser}" var = "list">
 					<tr>
@@ -23,12 +23,29 @@
 						</td>
 					</tr>
 			</c:forEach>
+					
+		</table-->
+		
+
+		<table border='1'>
+			
+			<c:forEach items ="${listStudent}" var = "list">
+					<c:if test = "(${list.num >2) && (${list.num <6})}" />
+					
+					<tr>
+						<td>
+							${list.num}
+						</td>
+							${list.username}
+						<td>
+						</td>
+					</tr>
+			</c:forEach>
 			
 		
 		
 			
 		
 		</table>
-
 </body>
 </html>
